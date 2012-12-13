@@ -1,44 +1,4 @@
 
-/* hide gist interface */
-#header,
-#revisions,
-#comments,
-#delete_link,
-#footer,
-#files .file .meta,
-#forks,
-.fork-info {
-  display:none !important;
-}
-.secondary {
-  float: none !important;
-  width: auto !important;
-}
-.main {
-  width:auto !important;
-}
-#repos .repo, #main, .file, .file article {
-  background:none !important;
-  background: transparent !important;
-}
-
-/* hide github interface */
-.last-commit,
-.commit,
-.breadcrumb,
-.bubble,
-.pagehead,
-#readme .name,
-a.anchor span {
-  display:none !important;
-}
-#readme, .markdown-body {
-  background:none !important;
-  background: transparent !important;
-  border: 0 none !important;
-}
-
-
 /* basic style */
 
 body {
@@ -72,73 +32,6 @@ a:hover {
   border:0 none !important;
   width:1024px;
   margin:0 auto;
-}
-
-/* owner/gravatar/description becomes title screen */
-#owner {
-  background:none !important;
-  background: transparent !important;
-  display: block !important;
-  text-align: center !important;
-  padding: 30px !important;
-  margin-top:120px !important;
-}
-#owner .name,
-#owner .gravatar {
-  display: block !important;
-  background-color:none !important;
-  background: transparent !important;
-  border: 0 none !important;
-}
-#owner .gravatar img {
-  height:36px !important;
-  width: 36px !important;
-}
-#owner .actor {
-  border: 0 none !important;
-  background-color:none !important;
-  background: transparent !important;
-}
-#owner .name {
-  font-weight:normal !important;
-  font-size: 24px !important;
-  color: #676482 !important;
-  text-shadow: hsla(246, 13%, 100%, 0.5) 0px 1px 0px;
-}
-#owner .name a {
-  color: #676482 !important;
-  font-weight:normal !important;
-}
-#owner .name span {
-  display: none !important;
-}
-/* hide gist info, except for title */
-
-#repos table .label, #private-clone-url, #repos .title, #repos table tr + #repos table tr  {
-  display: none !important;
-}
-#repos table td {
-  width:auto !important;
-  height:auto !important;
-}
-#repos .repo {
-  margin: 0 !important;
-  border: 0 none !important;
-}
-#repos table {
-  margin:0 auto !important;
-  float: none !important;
-  max-width: auto !important;
-}
-#repos table .description {
-  font-size:54px !important;
-  line-height:54px !important;
-  font-weight:normal !important;
-  text-align:center !important;
-  color:#5E559E;
-}
-#repos table .description form, #repos table .description a {
-  display: none;
 }
 
 /* slide text style */
