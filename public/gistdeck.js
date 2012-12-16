@@ -20,8 +20,6 @@ function displaySlide(n) {
   n = Math.min(n, slides.length-1);
   n = Math.max(n, 0);
 
-  console.log(n);
-
   var s = slides.eq(n);
   var top = s.offset().top;
 
