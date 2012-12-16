@@ -17,6 +17,11 @@ body {
   padding-bottom:600px !important;
 }
 
+article {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
 a {
   color: #4E51A3 !important;
 }
