@@ -1,5 +1,10 @@
+# encoding: utf-8
+
 require 'sinatra'
 require 'rest-client'
+
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
 
 JS = "
   GISTDECK_CSS_URL = '/gistdeck.css';
@@ -20,8 +25,8 @@ JS = "
 SCRIPT = %Q(<script type="text/javascript">#{JS}</script>)
 
 get '/:gist_id' do |gist_id|
-  html = RestClient.get "https://asteritedummy:asteritedummy1@gist.github.com/#{gist_id}"
-  gist_content = html =~ /(<article\s+class=\"markdown-body\">.+\<\/article\>)/m && $1
+  html = RestClient.get("https://asteritedummy:asteritedummy1@gist.github.com/#{gist_id}")
+  gist_content = html =~ /(<article\s+class=\"markdown-body.*?\".*?>.+\<\/article\>)/m && $1
   # index = body.index '</body>'
 
   "<html><head><script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js\"></script></head><body>#{gist_content}#{SCRIPT}</body></html>"
